@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && npm run start",
-    "server": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+    "start": "nodemon app.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run start\" \"npm run client\""
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "mongoose": "^5.0.10"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"
