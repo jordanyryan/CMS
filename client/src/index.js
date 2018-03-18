@@ -8,7 +8,7 @@ import { createStore, applyMiddleware } from 'redux';
 import reducers from './reducers';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import promise from 'redux-promise';
-import Home from './components/index';
+import Layout from './components/layout';
 
 import registerServiceWorker from './registerServiceWorker';
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
@@ -18,7 +18,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/home" component={Home} />
+          <Route path="/home" component={Layout} />
           <Route exact path="/" component={App} />
         </Switch>
       </div>
